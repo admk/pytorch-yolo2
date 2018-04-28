@@ -17,10 +17,17 @@ Convert https://pjreddie.com/darknet/yolo/ into pytorch. This repository is tryi
 - [x] add focal loss
 
 ---
+#### Convert A Pre-Trained Model
+```
+curl -O https://pjreddie.com/media/files/yolov2.weights
+python convert.py cfg/yolo.cfg yolov2.weights yolo2.pth
+```
+
+---
 #### Detection Using A Pre-Trained Model
 ```
-wget http://pjreddie.com/media/files/yolo.weights
-python detect.py cfg/yolo.cfg yolo.weights data/dog.jpg
+curl -O https://pjreddie.com/media/files/yolov2.weights
+python detect.py cfg/yolo.cfg yolov2.weights data/dog.jpg
 ```
 You will see some output like this:
 ```
